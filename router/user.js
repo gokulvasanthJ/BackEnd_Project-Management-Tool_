@@ -5,8 +5,11 @@ const { dbUrl } = require("../dbConfig");
 const { UserModel } = require("../schema/UserSchema");
 const { createToken, validate, adminGaurd,hashPassword, comparePassword } = require("../auth");
 
-mongoose.connect(dbUrl);
-
+const connectDb=async()=>{
+  await mongoose.connect(dbUrl);
+  console.log("mongodb connected")
+  }
+  connectDb
 router.get("/", async (req, res) => {
   res.send(`
     <h2>Available Routes</h2>
