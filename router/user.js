@@ -9,7 +9,7 @@ const connectDb=async()=>{
   await mongoose.connect(dbUrl);
   console.log("mongodb connected")
   }
-  connectDb
+  connectDb()
 router.get("/", async (req, res) => {
   res.send(`
     <h2>Available Routes</h2>
