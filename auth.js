@@ -12,6 +12,7 @@ let hashPassword=async (password)=>{
 }
 
 let comparePassword=async (password,hashedPassword)=>{
+    console.log("hello")
     return bcrypt.compare(password,hashedPassword)
 }
 
